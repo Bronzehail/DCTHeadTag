@@ -1,5 +1,5 @@
-name: HeadTag
-main: HeadTag\HeadTag
+name: DCTHeadTag
+main: DCTHeadTag\HeadTag
 load: STARTUP
 author: DCT TEAM
 version: "1.0.0"
