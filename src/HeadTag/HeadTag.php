@@ -44,7 +44,7 @@ switch($player->getGamemode()){
 $h = $player->getHealth();
 $m = $this->plugin->EconomyAPI->mymoney($player);
 			$name = $player->getName();
-			$player->setNameTag("$name\n$m\n$h\n$gm");
+			$player->setNameTag("$name \n $m \n $h \n $gm ");
 			}
 }
 }
