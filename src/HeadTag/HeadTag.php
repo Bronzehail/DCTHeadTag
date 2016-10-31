@@ -37,7 +37,7 @@ class HeadTag extends PluginBase implements Listener {
 		$this->getserver()->getPluginManager()->registerEvents($this,$this);
 			@mkdir($this->getDataFolder());
 				$this->join= new Config($this->getDataFolder()."Config.yml", Config::YAML, array("名子"=>"名子","模式"=>"模式","權限"=>"權限","錢"=>"錢","血量"=>"血量","IP"=>"IP","頭部顯示"=>"on"));
-					$this->getLogger()->info(TEXTFORMAT::GOLD . "§cTSR.TW§e星童插件組 §6HeadTag 頭部顯示加載中");
+					$this->getLogger()->info(TEXTFORMAT::GOLD . "§cDCT§e碼頭創造者 §6HeadTag 頭部顯示加載中");
 	}
 	public function onCommand(CommandSender $sender,Command $cmd,$label,array $args){
 	$n=$sender->getPlayer()->getName();
