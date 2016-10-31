@@ -44,78 +44,77 @@ class HeadTag extends PluginBase implements Listener {
 	$p=$sender->getPlayer();
 	$vtag=$this->join->get("頭部");
 	switch(strtolower($cmd->getName())){
-		case "vtag":
-			if($vtag=="on"){
+		case "headtag":
+			if($headtag=="on"){
 				$this->join->set("頭部","off");
 					$this->join->save();
 			return true;
-      }else{
-      if($vtag=="off"){
-       $this->join->set("頭部","on");
-        $this->join->save();
-         $sender->sendmessage("§a成功開啟");
-         return true;
+      			   }else{
+      				if($headtag=="off"){
+       					$this->join->set("頭部","on");
+        					$this->join->save();
+         						$sender->sendmessage("§a成功開啟");
+         		return true;
       }
 	public function join(PlayerJoinEvent $e){
 		$p=$e->getPlayer();
 			$gm=$p->getgamemode();
 				$ip=$p->getAddress();
-			$p1=$this->join->get("名字");
-		$p2=$this->join->get("模式");
-	$p3=$this->join->get("權限");
-		$p4=$this->join->get("錢");
-			$p5=$this->join->get("血量");
-				$p6=$this->join->get("IP");
-			$op=$p->isOp();
+					$p1=$this->join->get("名字");
+						$p2=$this->join->get("模式");
+							$p3=$this->join->get("權限");
+								$p4=$this->join->get("錢");
+									$p5=$this->join->get("血量");
+										$p6=$this->join->get("IP");
+											$op=$p->isOp();
 		if($gm=="1"){
-	$x="§a創造";
-	}
-		if($gm=="0"){
-			$x="§c生存";
-	}
-				if($op){
-		$o="§a管理員";
-	}else{
-	$o="§6玩家";
-	}
-			$h=$p->getHealth();
-		$mh=$p->getMaxHealth();
-	$m=EconomyAPI::getInstance()->myMoney(strtolower($p->getName()));
-	}
+			$x="§a創造";
+				}
+				if($gm=="0"){
+					$x="§c生存";
+						}
+						if($op){
+							$o="§a管理員";
+								}else{
+									$o="§6玩家";
+										}
+										$h=$p->getHealth();
+											$mh=$p->getMaxHealth();
+												$m=EconomyAPI::getInstance()->myMoney(strtolower($p->getName()));
+													}
 	public function move(PlayerMoveEvent $e){
 		$p=$e->getPlayer();
 			$gm=$p->getgamemode();
 				$ip=$p->getAddress();
-			$p1=$this->join->get("名字");
-		$p2=$this->join->get("模式");
-	$p3=$this->join->get("權限");
-		$p4=$this->join->get("錢");
-			$p5=$this->join->get("血量");
-				$p6=$this->join->get("IP");
-			$op=$p->isOp();
+					$p1=$this->join->get("名字");
+						$p2=$this->join->get("模式");
+							$p3=$this->join->get("權限");
+								$p4=$this->join->get("錢");
+									$p5=$this->join->get("血量");
+										$p6=$this->join->get("IP");
+											$op=$p->isOp();
 		if($gm=="1"){
-	$x="§a創造";
-	}
-		if($gm=="0"){
-			$x="§c生存";
-	}
-		if($op){
-			$o="§a管理員";
-	}else{
-		$o="§6玩家";
-	}
-	$h=$p->getHealth();
-	$mh=$p->getMaxHealth();
-	$m=EconomyAPI::getInstance()->myMoney(strtolower($p->getName()));
-	$jj=$this->join->get("頭部");
-	if($this->join->get("頭部")=="on"){
-	$p->setNameTag("§a".$p1."§6".$p."\n§a".$p2.".".$x."\n§a".$p3.".".$o."\n§a".$p4."§6".$m."\n§a".$p5.".".$h."|".$mh."\n§a".$p6.". §c".$ip."");
-	}
-	if($this->join->get("頭部")=="off"){
-	}
-	}
-	public function onDisable()
-    {
+			$x="§a創造";
+				}
+				if($gm=="0"){
+					$x="§c生存";
+						}
+						if($op){
+							$o="§a管理員";
+							}else{
+								$o="§6玩家";
+									}
+									$h=$p->getHealth();
+										$mh=$p->getMaxHealth();
+											$m=EconomyAPI::getInstance()->myMoney(strtolower($p->getName()));
+												$jj=$this->join->get("頭部");
+													if($this->join->get("頭部")=="on"){
+														$p->setNameTag("§a".$p1."§6".$p."\n§a".$p2.".".$x."\n§a".$p3.".".$o."\n§a".$p4."§6".$m."\n§a".$p5.".".$h."|".$mh."\n§a".$p6.". §c".$ip."");
+															}
+															if($this->join->get("頭部")=="off"){
+																}
+																	}
+	public function onDisable(){
 		$this->getLogger()->info(TEXTFORMAT::RED . "HeadTag 頭部顯示卸載");
 	}
 }	
