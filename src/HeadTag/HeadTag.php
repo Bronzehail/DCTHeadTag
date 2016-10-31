@@ -11,6 +11,8 @@ use pocketmine\Server;
 use pocketmine\utils\Config;
 use pocketmine\utils\TextFormat;
 
+use FactionsPro\Main1;
+use Love\love;
 use onebone\economyapi\EconomyAPI;
 
 class HeadTag extends PluginBase{
@@ -43,15 +45,21 @@ public function __construct(HeadTag $plugin)
 $result = array();
 		foreach($this->plugin->getServer()->getOnlinePlayers() as $player){
 switch($player->getGamemode()){
-				case 0: $gm = "生存";break;
-				case 1: $gm = "創造";break;
-				case 2: $gm = "冒險";break;
-				case 3: $gm = "觀看";break;
-			}
-$h = $player->getHealth();
-$m = $this->plugin->EconomyAPI->mymoney($player);
-			$name = $player->getName();
-			$player->setNameTag("$name \n $m \n $h \n $gm ");
+				case 0: $gm = "生存";
+					break;
+					case 1: $gm = "創造";
+						break;
+						case 2: $gm = "冒險";
+							break;
+							case 3: $gm = "觀看";
+								break;
+								}
+								$h = $player->getHealth();
+									$m = $this->plugin->EconomyAPI->mymoney($player);
+										$f = $this->plugin->FactionsPro->factions($player);
+											$l = $this->plugin->Love->love($player);
+												$name = $player->getName();
+													$player->setNameTag("$name \n $l \n $f \n $m \n $h \n $gm ");
 			}
 }
 }
