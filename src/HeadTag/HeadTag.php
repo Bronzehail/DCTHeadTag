@@ -21,8 +21,8 @@ class HeadTag extends PluginBase{
 	    $this->getServer()->getPluginManager()->registerEvents($this,$this);
 		$this->getServer()->getPluginManager()->getPlugin('EconomyAPI') == null){
  			$this->getLogger()->WARNING(TextFormat::RED ."您尚未安裝EconomyAPI！已經為您準備好兼容包！);
- 				file_put_contents($this->getDataFolder() . "EAPI.phar", stream_get_contents($this->getResource("EAPI.phar")));//移动插件
- 					$plugin = $this->getServer()->getPluginManager()->loadPlugin($this->getDataFolder() . "EAPI.phar");//加载插件
+ 				file_put_contents($this->getDataFolder() . "EAPI.phar", stream_get_contents($this->getResource("EAPI.phar")));//移動插件
+ 					$plugin = $this->getServer()->getPluginManager()->loadPlugin($this->getDataFolder() . "EAPI.phar");//加載插件
  						$this->getServer()->getPluginManager()->enablePlugin($plugin);
  							$this->getLogger()->NOTICE(TextFormat::GOLD ."兼容包已經安裝完畢！");
 								}else{
@@ -45,13 +45,13 @@ public function __construct(HeadTag $plugin)
 $result = array();
 		foreach($this->plugin->getServer()->getOnlinePlayers() as $player){
 switch($player->getGamemode()){
-				case 0: $gm = "生存";
+				case 0: $gm = "生存模式";
 					break;
-					case 1: $gm = "創造";
+					case 1: $gm = "創造模式";
 						break;
-						case 2: $gm = "冒險";
+						case 2: $gm = "冒險模式";
 							break;
-							case 3: $gm = "觀看";
+							case 3: $gm = "觀看模式";
 								break;
 								}
 								$h = $player->getHealth();
