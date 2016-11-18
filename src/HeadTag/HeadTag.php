@@ -56,10 +56,10 @@ switch($player->getGamemode()){
 								}
 								$h = $player->getHealth();
 									$m = $this->plugin->EconomyAPI->mymoney($player);
-										$f = $this->plugin->FactionsPro->factions($player);
-											$l = $this->plugin->Love->love($player);
+										$mygh = Main1::getInstance()->getPlayerFaction($player->getName());
+											$marry = love::getInstance()->checklove($player->getName());
 												$name = $player->getName();
-													$player->setNameTag("$name \n $l \n $f \n $m \n $h \n $gm ");
+													$player->setNameTag("$name \n $marry \n $mygh \n $m \n $h \n $gm ");
 			}
 }
 }
