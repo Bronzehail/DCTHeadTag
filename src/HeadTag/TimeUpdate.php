@@ -14,11 +14,10 @@ use onebone\economyapi\EconomyAPI;
 
 class TimeUpdate extends PluginTask {
 
-public function __construct(HeadTag $plugin)
-    {
-        parent::__construct($plugin);
-          $this->plugin = $plugin;
-    }
+public function __construct(HeadTag $plugin){
+	parent::__construct($plugin);
+        	$this->plugin = $plugin;
+    		}
 	
 	public function onRun($currentTick){
     		$result = array();
@@ -39,5 +38,6 @@ public function __construct(HeadTag $plugin)
 											$marry = love::getInstance()->checklove($player->getName());
 												$name = $player->getName();
 													$player->setNameTag("$name \n $marry \n $mygh \n $m \n $h \n $gm ");
-			}
+													}
+		}
 }
