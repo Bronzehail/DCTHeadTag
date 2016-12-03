@@ -21,9 +21,8 @@ class HeadTag extends PluginBase{
     public function onEnable(){
 	$this->getServer()->getPluginManager()->registerEvents($this,$this);
 		$this->getLogger()->info(TEXTFORMAT::GOLD . ">>  頭部顯示加載中")
-		}
-		@mkdir($this->getDataFolder());
-			$this->getServer()->getScheduler()->scheduleRepeatingTask(new TimeUpdate($this), 10);
+			@mkdir($this->getDataFolder());
+				$this->getServer()->getScheduler()->scheduleRepeatingTask(new TimeUpdate($this), 10);
     }
 }
 
