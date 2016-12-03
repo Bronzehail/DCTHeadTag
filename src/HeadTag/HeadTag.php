@@ -12,6 +12,7 @@ use pocketmine\utils\Config;
 use pocketmine\utils\TextFormat;
 
 use FactionsPro\Main1;
+use HeadTag\TimeUpdate;
 use Love\love;
 use onebone\economyapi\EconomyAPI;
 
