@@ -4,6 +4,7 @@ namespace HeadTag;
 
 use HeadTag\TimeUpdate;
 use pocketmine\plugin\PluginBase;
+use pocketmine\utils\TextFormat;
 
 class HeadTag extends PluginBase{
 
