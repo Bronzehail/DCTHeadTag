@@ -2,7 +2,7 @@
 
 namespace HeadTag;
 
-use HeadTag\TimeUpdate;
+use HeadTag\TimeUpdateTask;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\TextFormat;
 
