@@ -14,7 +14,8 @@ use onebone\economyapi\EconomyAPI;
 
 class TimeUpdateTask extends PluginTask {
 
-	private	public function __construct(HeadTag $plugin){
+	private	$plugin;
+	public function __construct(HeadTag $plugin){
 		parent::__construct($plugin);
 			$this->plugin = $plugin;
 			}
