@@ -14,7 +14,7 @@ class HeadTag extends PluginBase{
 	}
 	
 	public function onDisable(){
-	    $this->getServer()->getLogger()->info(TEXTFORMAT::GOLD . ">> 頭部顯示卸載!!");
+	    $this->getServer()->getLogger()->info(TEXTFORMAT::RED . ">> 頭部顯示卸載!!");
 	}
 
 }
