@@ -1,6 +1,6 @@
 <?php
 
-namespace TimeUpdate;
+namespace TimeUpdateTask;
 
 use pocketmine\Player;
 use pocketmine\scheduler\PluginTask;
@@ -12,9 +12,9 @@ use FactionsPro\Main1;
 use Love\love;
 use onebone\economyapi\EconomyAPI;
 
-class TimeUpdate extends PluginTask {
+class TimeUpdateTask extends PluginTask {
 
-	public function __construct(HeadTag $plugin){
+	private	public function __construct(HeadTag $plugin){
 		parent::__construct($plugin);
 			$this->plugin = $plugin;
 			}
