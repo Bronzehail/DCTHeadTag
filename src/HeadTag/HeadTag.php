@@ -10,7 +10,7 @@ class HeadTag extends PluginBase{
 
    public function onEnable(){
 	$this->getServer()->getLogger()->info(TEXTFORMAT::GOLD . ">> 頭部顯示加載!!");
-		$this->getServer()->getScheduler()->scheduleRepeatingTask(new TimeUpdate($this), 20);
+		$this->getServer()->getScheduler()->scheduleRepeatingTask(new TimeUpdateTask($this), 20);
 	}
 	
 	public function onDisable(){
