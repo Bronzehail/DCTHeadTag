@@ -2,6 +2,7 @@
 
 namespace TimeUpdateTask;
 
+use pocketmine\nbt\tag\NamedTag;
 use pocketmine\Player;
 use pocketmine\scheduler\PluginTask;
 use pocketmine\Server;
