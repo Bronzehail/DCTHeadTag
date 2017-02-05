@@ -1,8 +1,13 @@
 name: DCTHeadTag
+
 main: HeadTag\HeadTag
+
 load: STARTUP
+
 author: DCT TEAM
+
 version: "1.0.0"
+
 api:
 - 1.12.0
 - 1.13.0
